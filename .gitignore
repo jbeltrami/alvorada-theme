@@ -1,0 +1,10 @@
+vendor
+wp-content
+composer.lock
+node_modules
+dist
+.cache
+.DS_Store
+.tmp
+*.log
+*.map
