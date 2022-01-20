@@ -1,0 +1,30 @@
+{#
+/**
+* Block Name: Text Image
+*
+* This is the template that displays the text image block.
+*/
+#}
+
+{% if is_preview %}
+<p>I will only appear in the editor.</p>
+{% endif %}
+
+<div
+  id="example-{{ block.id }}"
+  class="wrapper"
+>
+  <p style="color: green; background-color: black;">This is the test block</p>
+  {% if fields.texto %}
+  <div class="richtext">
+    {{ fields.texto }}
+  </div>
+  {% endif %}
+  {% if fields.imagem %}
+  <img
+    src="{{ fields.imagem }}"
+    alt=""
+  >
+  {% endif %}
+
+</div>

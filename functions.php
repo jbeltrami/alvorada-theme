@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Alvorada Cogumelos
  * Based on: https://github.com/timber/starter-theme
@@ -8,11 +9,31 @@
  * @since   Timber 0.1
  */
 
-define('ZOR_DEV_MODE', true);
+// Create blocks category
+
+function custom_block_category($categories)
+{
+  return array_merge(
+    $categories,
+    [
+      [
+        'slug'  => 'alvorada',
+        'title' => __('Alvorada Blocks'),
+      ],
+    ]
+  );
+}
 
 // Includes
 include get_theme_file_path('/includes/timber.php');
+include get_theme_file_path('/includes/woocommerce.php');
 include get_theme_file_path('/includes/front/enqueue.php');
+include get_theme_file_path('/includes/blocks/text-image.php');
+include get_theme_file_path('/includes/blocks/test-timber-block.php');
 
 // Hooks
 add_action('wp_enqueue_scripts', 'zor_enqueue');
+add_action('after_setup_theme', 'theme_add_woocommerce_support');
+add_action('block_categories', 'custom_block_category', 10, 2);
+add_action('acf/init', 'zor_text_image');
+add_action('acf/init', 'my_acf_init');
