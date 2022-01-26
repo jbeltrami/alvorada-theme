@@ -6,9 +6,11 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const rename = require('gulp-rename');
+const imageOptim = require('gulp-imageoptim');
 const sourcemaps = require('gulp-sourcemaps');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
+const { optimize } = require('gulp-imageoptim');
 
 const cssSource = 'src/scss';
 
@@ -21,6 +23,12 @@ function buildJs() {
 
 function moveJsVendors() {
   return src(`src/js/vendor/*.js`).pipe(dest('static/js/vendor'));
+}
+
+function optimizeImages() {
+  return src('src/images/**/*')
+    .pipe(imageOptim.optimize())
+    .pipe(dest('static/images'));
 }
 
 function moveFonts() {
@@ -64,4 +72,10 @@ exports.watch = function () {
   );
 };
 
-exports.default = series(buildJs, buildScss);
+exports.default = series(
+  buildJs,
+  buildScss,
+  moveJsVendors,
+  moveFonts,
+  optimizeImages
+);

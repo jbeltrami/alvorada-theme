@@ -6,9 +6,11 @@ function zor_enqueue()
 
   // Register Styles
   wp_register_style('zor_style', $uri . '/static/css/index.min.css', []);
+  wp_register_style('zor_bootstrap', $uri . '/static/css/bootstrap.min.css', []);
 
   // Enqueue Styles
   wp_enqueue_style('zor_style');
+  wp_enqueue_style('zor_bootstrap');
 
 
   // Register Scripts

@@ -7,4 +7,10 @@
   src: local('Get Show Regular'), url('Get Show.woff') format('woff');
 }
 
+@import './global';
+@import './vars';
+@import './type';
+
 @import './header/header';
+
+@import './pages/home';
