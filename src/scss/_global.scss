@@ -2,3 +2,24 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: translateY(152px);
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(132% + 1.3px);
+      height: 152px;
+
+      .shape-fill {
+        fill: $dkbrown;
+    }
+  }
+}

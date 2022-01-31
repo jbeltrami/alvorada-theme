@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 
 @font-face {
-  font-family: 'Get Show Regular';
+  font-family: 'Get Show';
   font-style: normal;
   font-weight: normal;
-  src: local('Get Show Regular'), url('Get Show.woff') format('woff');
+  src: url('../fonts/Get-Show.woff') format('woff');
 }
 
-@import './global';
+// Globals
 @import './vars';
+@import './global';
 @import './type';
+@import './blocks/richtext/richtext';
 
-@import './header/header';
+// Components
+@import './components/buttons';
+
+// Partials
+@import './blocks/header/header';
+
+// Blocks
+@import './blocks/text-and-image/text-and-image';
 
 @import './pages/home';

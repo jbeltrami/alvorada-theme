@@ -1,20 +1,10 @@
 .header {
+  background-color: $dkbrown;
   position: relative;
   width: 100%;
 
   .wrapper {
     display: flex;
-  }
-
-  .wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    svg {
-      width: 95%;
-    }
   }
 
   .menu {
