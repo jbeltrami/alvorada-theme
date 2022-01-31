@@ -29,7 +29,7 @@
 
 </article>
 
-{% include ["partials/tease-product.twig"] with { products: related_products } %}
+{% include ["views/woo/tease-product.twig"] with { products: related_products } %}
 
 {% do action('woocommerce_after_single_product') %}
 
