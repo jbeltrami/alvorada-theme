@@ -1,0 +1,64 @@
+.b-ctas {
+    background-position: center left;
+    background-size: 15vw;
+    background-repeat: no-repeat;
+
+    .ctas-wrapper {
+        margin-top: 5vw;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 350ms ease;
+
+        &:hover {
+            color: $white;
+            .c-single-cta {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .c-single-cta {
+        position: relative;
+        text-align: center;
+        padding: rem-calc(30px) rem-calc(40px);
+        height: 100%;
+        border: 2px solid $grey;
+        border-radius: 50px 50px 50px 50px;
+        padding-top: 4vw;
+
+        .cta__icon {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10vw;
+            max-width: rem-calc(175px);
+            min-width: rem-calc(40px);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(
+                310deg,
+                rgba(240, 49, 45, 1) 0%,
+                rgba(240, 49, 45, 1) 30%,
+                rgba(255, 203, 0, 1) 100%
+            );
+
+            z-index: -1;
+            border-radius: 50px;
+            transition: opacity 350ms ease;
+            opacity: 0;
+        }
+    }
+}

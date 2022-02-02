@@ -1,0 +1,17 @@
+<div class="col-lg-4 mb-4">
+	{% if field.link %}
+		<a href={{field.link.url}}>
+		{% endif %}
+		<div class="c-single-cta">
+			<img class="cta__icon" src="{{ field.icone.url }}" alt="{{ field.icone.alt }}">
+			<div class="richtext">
+				{{ field.texto }}
+			</div>
+
+
+		</div>
+		{% if field.link %}
+		</a>
+
+	{% endif %}
+</div>

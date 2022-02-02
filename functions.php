@@ -29,9 +29,11 @@ include get_theme_file_path('/includes/timber.php');
 include get_theme_file_path('/includes/woocommerce.php');
 include get_theme_file_path('/includes/front/enqueue.php');
 include get_theme_file_path('/includes/blocks/text-image.php');
+include get_theme_file_path('/includes/blocks/ctas.php');
 
 // Hooks
 add_action('wp_enqueue_scripts', 'zor_enqueue');
 add_action('after_setup_theme', 'theme_add_woocommerce_support');
 add_action('block_categories', 'custom_block_category', 10, 2);
 add_action('acf/init', 'zor_text_image');
+add_action('acf/init', 'zor_ctas');

@@ -1,0 +1,35 @@
+{#
+/**
+* Block Name: CTAs
+*
+* This is the template that displays the CTAs block.
+*/
+#}
+
+{% if is_preview %}
+	<p>
+		Please click on the pencil to edit.
+	</p>
+{% endif %}
+
+<div id="{{ block.id }}" class="b-ctas block-spacer" style="background-image: url({{theme.path}}/static/images/cogumelo-bg-ctas.png)">
+	<div class="container">
+		{% if fields.intro %}
+			<div class="row align-items-center justify-content-center">
+				<div class="col-lg-4">
+					<h2 class="text-center">
+						{{fields.intro}}
+					</h2>
+				</div>
+			</div>
+
+		{% endif %}
+
+		<div class="row align-items-stretch justify-content-center ctas-wrapper">
+			{% for field in fields.ctas %}
+				{% include "templates/block/ctas/single-cta.twig" %}
+			{% endfor %}
+		</div>
+	</div>
+
+</div>

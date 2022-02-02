@@ -1,13 +1,6 @@
 .b-text-and-image {
-    padding-top: rem-calc(20px);
-    padding-bottom: rem-calc(20px);
     margin-bottom: rem-calc(152px);
     position: relative;
-
-    @media (min-width: $md) {
-        padding-top: rem-calc(40px);
-        padding-bottom: rem-calc(40px);
-    }
 
     .richtext {
         h1,

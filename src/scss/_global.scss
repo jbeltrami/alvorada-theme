@@ -19,3 +19,13 @@ body {
         height: 152px;
     }
 }
+
+.block-spacer {
+    padding-top: rem-calc(30px);
+    padding-bottom: rem-calc(30px);
+
+    @media (min-width: $md) {
+        padding-top: rem-calc(60px);
+        padding-bottom: rem-calc(60px);
+    }
+}
