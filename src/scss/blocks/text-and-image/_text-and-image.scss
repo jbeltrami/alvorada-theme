@@ -1,22 +1,29 @@
 .b-text-and-image {
-  background-color: $dkbrown;
-  padding-top: rem-calc(20px);
-  padding-bottom: rem-calc(20px);
-  position: relative;;
+    padding-top: rem-calc(20px);
+    padding-bottom: rem-calc(20px);
+    margin-bottom: rem-calc(152px);
+    position: relative;
 
-  @media(min-width: $md) {
-    padding-top: rem-calc(40px);
-  padding-bottom: rem-calc(40px);
-  }
-
-
-  .richtext {
-    h1, p {
-      color: $white;
+    @media (min-width: $md) {
+        padding-top: rem-calc(40px);
+        padding-bottom: rem-calc(40px);
     }
 
-    pre {
-      color: $yellow;
+    .richtext {
+        h1,
+        p {
+            color: $white;
+        }
+
+        pre {
+            color: $yellow;
+        }
     }
-  }
+
+    &.bg-Branco {
+        h1,
+        p {
+            color: $black;
+        }
+    }
 }

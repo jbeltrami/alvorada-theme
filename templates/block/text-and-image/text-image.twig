@@ -1,0 +1,36 @@
+{#
+/**
+* Block Name: Text Image
+*
+* This is the template that displays the text image block.
+*/
+#}
+
+{% if is_preview %}
+	<p>
+		Please click on the pencil to edit.
+	</p>
+{% endif %}
+
+<div id="{{ block.id }}" class="b-text-and-image bg-{{color}}">
+	<div class="container">
+		<div class="row">
+			{% if position == 'Direita' %}
+				{% include "templates/block/text-and-image/image-right.twig" %}
+			{% endif %}
+
+			{% if position == 'Esquerda' %}
+				{% include "templates/block/text-and-image/image-left.twig" %}
+			{% endif %}
+		</div>
+	</div>
+
+	{% if color == 'Branco' %}
+		{% include "/partial/wave-divider.twig" with {fill: '#fff'} %}
+	{% endif %}
+
+	{% if color == 'Marrom' %}
+		{% include "/partial/wave-divider.twig" with {fill: '#3a2f29'} %}
+	{% endif %}
+
+</div>

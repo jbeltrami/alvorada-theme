@@ -1,0 +1,20 @@
+<div class="col-lg-6">
+	{% if fields.texto %}
+		<div class="richtext">
+			{{ fields.texto }}
+		</div>
+	{% endif %}
+
+	{% if fields.cta %}
+		<a class="cta_button" href="{{fields.cta.url}}">
+			{{fields.cta.title}}
+		</a>
+	{% endif %}
+</div>
+
+<div class="col-lg-6">
+	{% if fields.imagem %}
+
+		<img class="img-fluid" src="{{ Image(fields.imagem).src }}" alt="{{ Image(fields.imagem).alt }}">
+	{% endif %}
+</div>

@@ -34,10 +34,12 @@ function zor_text_image_render_callback($block, $content = '', $is_preview = fal
 
   // Store field values.
   $context['fields'] = get_fields();
+  $context['color'] = get_field('cor_de_fundo');
+  $context['position'] = get_field('posicionamento_de_imagem');
 
   // Store $is_preview value.
   $context['is_preview'] = $is_preview;
 
   // Render the block.
-  Timber::render('/block/text-image.twig', $context);
+  Timber::render('/block/text-and-image/text-image.twig', $context);
 }
