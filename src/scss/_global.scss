@@ -20,6 +20,36 @@ body {
     }
 }
 
+.info-top-wave {
+    left: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    transform: translateY(-140px);
+    svg {
+        height: 140px;
+        width: 100%;
+    }
+}
+
+.info-bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translateY(140px);
+
+    svg {
+        height: 140px;
+        width: 100%;
+    }
+}
+
 .block-spacer {
     padding-top: rem-calc(30px);
     padding-bottom: rem-calc(30px);

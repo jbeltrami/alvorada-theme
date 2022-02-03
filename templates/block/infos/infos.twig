@@ -1,0 +1,38 @@
+{#
+/**
+* Block Name: Infos
+*
+* This is the template that displays the infos block.
+*/
+#}
+
+{% if is_preview %}
+	<p>
+		Please click on the pencil to edit.
+	</p>
+{% endif %}
+
+<div id="{{ block.id }}" class="b-infos block-spacer bg-dkbrown" style="background-image: url({{fields.imagem_de_fundo.url}})">
+	{% include "templates/partial/info-top-wave.twig" %}
+
+	<div class="container">
+		{% if fields.intro %}
+			<div class="row align-items-center justify-content-center">
+				<div class="col-lg-6">
+					<div class="richtext">
+						{{fields.intro}}
+					</div>
+				</div>
+			</div>
+
+		{% endif %}
+
+		<div class="row align-items-stretch justify-content-center infos-wrapper">
+			{% for field in fields.infos %}
+				{% include "templates/block/infos/single-info.twig" %}
+			{% endfor %}
+		</div>
+	</div>
+
+	{% include "templates/partial/info-bottom-wave.twig" %}
+</div>
