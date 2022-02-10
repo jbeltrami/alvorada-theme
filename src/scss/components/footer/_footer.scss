@@ -1,0 +1,61 @@
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  h4 {
+    color: $white;
+  }
+
+  .menu__main {
+    ul {
+      flex-direction: column;
+      align-items: start !important;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        margin-bottom: rem-calc(12px);
+      }
+    }
+  }
+
+  p,
+  a {
+    font-family: $poppins;
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+  hr {
+    background-color: $white;
+    height: 2px;
+    width: 70%;
+    opacity: 0.2;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: color 350ms ease;
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  p {
+    color: $white;
+    text-decoration: none;
+    transition: color 350ms ease;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+}

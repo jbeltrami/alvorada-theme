@@ -1,53 +1,45 @@
 <div class="container pt-4 pb-4">
-  <div class="row">
-    <div class="col-lg-2">
+	<div class="row">
+		<div class="col-lg-2">
 
 
-      <a
-        class="hdr-logo-link"
-        href="{{site.url}}"
-        rel="home"
-      >
-        <img
-          src="{{theme.path}}/static/images/nav-logo.png"
-          alt="Logo Alvorada Cogumelos"
-        >
-      </a>
-    </div>
+			<a class="hdr-logo-link" href="{{site.url}}" rel="home">
+				<img src="{{theme.path}}/static/images/nav-logo.png" alt="Logo Alvorada Cogumelos">
+			</a>
+		</div>
 
-    <div class="col-lg-8 offset-lg-2 pt-3 pb-3">
-      <nav class="menu menu__util">
-        <ul class="d-flex align-items-center justify-content-start">
-          <li>
-            <a href="{{site.url}}/minha-conta"><span class="me-1">{% include "/icons/icone-perfil.twig" %}</span>
-              Meu Perfil</a>
-          </li>
-          <li>
-            <a href="{{site.url}}/carrinho"><span class="me-1">{% include "/icons/icone-carrinho.twig" %}</span>Meu
-              Carrinho</a>
-          </li>
-          <li>
-            <form
-              action="{{site.url}}"
-              role="search"
-              method="get"
-            >
-              <input
-                type="search"
-                name="s"
-                placeholder="Pesquisa"
-              >
-              <input type="submit">
-            </form>
-          </li>
-        </ul>
-      </nav>
-      <nav
-        id="nav-main"
-        class="menu menu__mainnav-main"
-        role="navigation"
-      >
+		<div class="col-lg-8 offset-lg-2 pt-3 pb-3">
+			<nav class="menu menu__util">
+				<ul class="d-flex align-items-center justify-content-start">
+					<li>
+						<a href="{{site.url}}/minha-conta">
+							<span class="me-1">
+								{% include "/icons/icone-perfil.twig" %}
+							</span>
+							Meu Perfil
+						</a>
+					</li>
+					<li>
+						<a href="{{site.url}}/carrinho">
+							<span class="me-1">
+								{% include "/icons/icone-carrinho.twig" %}
+							</span>
+							Meu Carrinho
+						</a>
+					</li>
+					<li>
+						<form action="{{site.url}}" role="search" method="get">
+							<input type="search" name="s" placeholder="Pesquisa">
+							<input type="submit">
+						</form>
+					</li>
+				</ul>
+			</nav>
+			<nav id="nav-main" class="menu menu__mainnav-main" role="navigation">
 
-        {% include "menu.twig" with {'items': menu.get_items} %}
-      </nav><!-- #nav -->
-    </div>
+				{% include "menu.twig" with {'items': menu.get_items} %}
+			</nav>
+			<!-- #nav -->
+		</div>
+	</div>
+</div>
