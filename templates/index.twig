@@ -1,10 +1,31 @@
 {% extends "base.twig" %}
 
 {% block content %}
-{% for post in posts %}
-{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-{% endfor %}
+	<div class="b-text-and-image bg-Marrom block-spacer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="text-white">
+						Blog da Alvorada
+					</h1>
+					<pre class="text-yellow">dicas, receitas e mais</pre>
+				</div>
+			</div>
+		</div>
+		{% include "/partial/wave-divider.twig" %}
+	</div>
 
-{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) }
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				{% for post in posts %}
+					{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) }
 %}
 {% endblock %}

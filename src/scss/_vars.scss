@@ -17,24 +17,25 @@ $black: #2a1d16;
 $brown: #b8442e;
 $grey: #e6e4e3;
 $white: #fff;
+$black: #1a1b1e;
 
 $colors: (
-    'yellow': #ffcb05,
-    'red': #ee3435,
-    'dkbrown': #3a2f29,
-    'Marrom': #3a2f29,
-    'black': #2a1d16,
-    'brown': #b8442e,
-    'white': #fff,
-    'Branco': #fff
+  'yellow': #ffcb05,
+  'red': #ee3435,
+  'dkbrown': #3a2f29,
+  'Marrom': #3a2f29,
+  'black': #2a1d16,
+  'brown': #b8442e,
+  'white': #fff,
+  'Branco': #fff
 );
 
 @each $color, $value in $colors {
-    .bg-#{$color} {
-        background-color: $value;
-    }
+  .bg-#{$color} {
+    background-color: $value;
+  }
 
-    .text-#{$color} {
-        color: $value;
-    }
+  .text-#{$color} {
+    color: $value;
+  }
 }

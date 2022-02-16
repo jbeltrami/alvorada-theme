@@ -1,9 +1,30 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.preview.length(25)}}</p>
-		{% if post.thumbnail.src %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
+	<a class="blog-card" href="{{post.link}}">
+
+		<div class="blog__thumb">
+			{% if post.thumbnail.src %}
+				<img src="{{post.thumbnail.src}}"/>
+			{% else %}
+				<img src="{{theme.path}}/static/images/AlvoradaCogumelos_Logo_FundoEscuro.jpg" alt="Logo Alvorada Cogumelos">
+			{% endif %}
+		</div>
+
+		<div class="blog__teaser">
+
+			<h5>
+				{{post.sub_titulo}}
+			</h5>
+
+			<h4>
+				{{post.title}}
+			</h4>
+
+			<p>
+				{{post.corpo_do_texto|slice(0, 100)}}
+			</p>
+		</div>
+
+	</a>
 {% endblock %}

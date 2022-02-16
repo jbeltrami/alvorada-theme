@@ -1,36 +1,37 @@
-.richtext {
-    h1 {
-        font-family: $montserrat;
-        font-size: 32px;
-        font-weight: bold;
-        line-height: 1.05;
+.richtext,
+body {
+  h1 {
+    font-family: $montserrat;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.05;
 
-        @media (min-width: $md) {
-            font-size: 64px;
-        }
+    @media (min-width: $md) {
+      font-size: 64px;
     }
+  }
 
-    pre {
-        font-family: $getShow;
-        font-size: 45px;
-        line-height: 0.85;
-        overflow: hidden;
-        padding-left: rem-calc(5px);
+  pre {
+    font-family: $getShow;
+    font-size: 45px;
+    line-height: 0.85;
+    overflow: hidden;
+    padding-left: rem-calc(5px);
 
-        @media (min-width: $md) {
-            font-size: 90px;
-        }
+    @media (min-width: $md) {
+      font-size: 90px;
     }
+  }
 
-    p {
-        font-family: $poppins;
-        font-size: 16px;
-        line-height: 1.45;
-        letter-spacing: 0.3px;
-        font-weight: 300;
+  p {
+    font-family: $poppins;
+    font-size: 16px;
+    line-height: 1.45;
+    letter-spacing: 0.3px;
+    font-weight: 300;
 
-        @media (min-width: $md) {
-            font-size: 20px;
-        }
+    @media (min-width: $md) {
+      font-size: 20px;
     }
+  }
 }
