@@ -13,17 +13,23 @@
 
 		<div class="blog__teaser">
 
-			<h5>
-				{{post.sub_titulo}}
-			</h5>
+			{% if post.sub_titulo %}
+				<h5>
+					{{post.sub_titulo}}
+				</h5>
+			{% endif %}
 
-			<h4>
-				{{post.title}}
-			</h4>
+			{% if post.title %}
+				<h4>
+					{{post.title}}
+				</h4>
+			{% endif %}
 
-			<p>
-				{{post.corpo_do_texto|slice(0, 100)}}
-			</p>
+			{% if pot.content %}
+				<p>
+					{{post.content|slice(0, 100)}}
+				</p>
+			{% endif %}
 		</div>
 
 	</a>

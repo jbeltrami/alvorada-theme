@@ -1,5 +1,9 @@
 {% block content %}
+	<a href="{{post.link}}">
+		<h1>
+			{{post.title}}
+		</h1>
 
-<h1>{{post.title}}</h1>
-
+		<img src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
+	</a>
 {% endblock %}
