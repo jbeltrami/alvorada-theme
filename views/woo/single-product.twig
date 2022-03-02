@@ -1,36 +1,50 @@
 {% extends "base.twig" %}
 
+
+{% set foo = post._product_image_gallery %}
+{% set splitFoo = foo|split(",") %}
 {% block content %}
 
-{% do action('woocommerce_before_single_product') %}
+	{% do action('woocommerce_before_single_product') %}
 
-<article
-  itemscope
-  itemtype="http://schema.org/Product"
-  class="single-product-details {{ post.class }}"
->
+	<article itemscope itemtype="http://schema.org/Product" class="single-product-details {{ post.class }} container my-5">
 
-  <div class="entry-images">
-    {% do action('woocommerce_before_single_product_summary') %}
+		<p>
+			{{splitFoo}}
+		</p>
 
-    <img src="{{ post.thumbnail.src('shop_single') }}" />
-  </div>
 
-  <div class="summary entry-summary">
-    {% do action('woocommerce_single_product_summary') %}
-  </div>
+		<div class="row">
+			<div
+				class="entry-images col-lg-6">
+				{# {% do action('woocommerce_before_single_product_summary') %} #}
 
-  {% do action('woocommerce_after_single_product_summary') %}
+				<img src="{{ post.thumbnail.src('shop_single') }}"/>
 
-  <meta
-    itemprop="url"
-    content="{{ post.link }}"
-  />
 
-</article>
+				{% for item in post._product_image_gallery %}
+					<p>
+						{{item}}
+					</p>
+				{% endfor %}
 
-{% include ["views/woo/tease-product.twig"] with { products: related_products } %}
+			</div>
 
-{% do action('woocommerce_after_single_product') %}
+
+			<div class="content col-lg-5 offset-lg-1">
+				<p>
+					{{post.content}}
+				</p>
+				<div class="summary entry-summary">
+					{% do action('woocommerce_single_product_summary') %}
+				</div>
+			</div>
+		</div>
+
+	</article>
+
+	{% include ["views/woo/tease-product.twig"] with { products: related_products } %}
+
+	{% do action('woocommerce_after_single_product') %}
 
 {% endblock %}
