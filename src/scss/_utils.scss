@@ -10,3 +10,22 @@
     transform: translate(-5px, -5px);
   }
 }
+
+.alvorada_wc_button {
+  display: inline-block !important;
+  border-radius: 28px !important;
+  box-shadow: 0 0 90px 0 rgba(0, 0, 0, 0.04) !important;
+  background-image: linear-gradient(to right, #f13b29, #f87c00) !important;
+  padding: 14px 30px !important;
+  text-decoration: none !important;
+  color: $white !important;
+  font-family: $poppins !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  transition: color 500ms ease !important;
+
+  &:hover,
+  &:focus {
+    color: $dkbrown !important;
+  }
+}
