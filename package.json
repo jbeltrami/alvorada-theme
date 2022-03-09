@@ -22,6 +22,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "jquery": "^3.6.0",
     "node-sass": "^7.0.1",
+    "prettier-plugin-twig-melody": "^0.4.6",
     "slick-carousel": "^1.8.1",
     "webpack-stream": "^7.0.0"
   },
