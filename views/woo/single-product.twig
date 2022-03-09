@@ -1,41 +1,52 @@
-{% extends "base.twig" %}
-
+{% extends 'base.twig' %}
 
 {% block content %}
+  {% include '/components/store/store-intro.twig' %}
+  {% do action('woocommerce_before_single_product') %}
 
-	{% do action('woocommerce_before_single_product') %}
+  <article itemscope
+    itemtype="http://schema.org/Product"
+    class="single-product-details {{ post.class }} container my-5">
+    <div class="row my-4">
+      <div class="col-lg-10">
+        <a class="cta_button" href="{{ site.url }}/loja">Voltar para a Loja</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="entry-images col-lg-6">
+        {# {% do action('woocommerce_before_single_product_summary') %} #}
 
-	<article itemscope itemtype="http://schema.org/Product" class="single-product-details {{ post.class }} container my-5">
+        <img class="single-product__thumb"
+          src="{{ post.thumbnail.src('shop_single') }}" />
+      </div>
 
-		<div class="row">
-			<div
-				class="entry-images col-lg-6">
-				{# {% do action('woocommerce_before_single_product_summary') %} #}
+      <div class="content col-lg-5 offset-lg-1">
+        <h1 class="single-product__title">
+          {{ post.title }}
+        </h1>
+        <p class="single-product__excerpt">
+          {{ post.post_excerpt }}
+        </p>
+        <p class="single-product__price">
+          R$
+          {{
+            post._regular_price|replace({
+              '.': ','
+            })
+          }}
+        </p>
+        <p class="single-product__content">
+          {{ post.content }}
+        </p>
 
-				<img class="single-product__thumb " src="{{ post.thumbnail.src('shop_single') }}"/>
+        <div class="summary entry-summary">
+          {% do action('woocommerce_single_product_summary') %}
+        </div>
+      </div>
+    </div>
+  </article>
 
+  {# {% include ["views/woo/tease-product.twig"] with { products: related_products } %} #}
 
-			</div>
-
-
-			<div class="content col-lg-5 offset-lg-1">
-      <h1 class="single-product__title">{{post.title}}</h1>
-      <p class="single-product__excerpt">{{post.post_excerpt}}</p>
-      <p class="single-product__price">R$: {{post._regular_price|replace({'.': ','})}}</p>
-				<p class="single-product__content">
-					{{post.content}}
-				</p>
-
-				<div class="summary entry-summary">
-					{% do action('woocommerce_single_product_summary') %}
-				</div>
-			</div>
-		</div>
-
-	</article>
-
-	{# {% include ["views/woo/tease-product.twig"] with { products: related_products } %} #}
-
-	{% do action('woocommerce_after_single_product') %}
-
+  {% do action('woocommerce_after_single_product') %}
 {% endblock %}

@@ -81,9 +81,13 @@
 
 .woocommerce-notices-wrapper {
   .woocommerce-message {
+    border: 0;
+    background-color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
+    font-family: $poppins;
 
     &:before {
       display: none;

@@ -5,18 +5,17 @@
   box-shadow: 0 0 90px 0 rgba(0, 0, 0, 0.04);
   background-image: linear-gradient(to right, #f13b29, #f87c00);
   padding: 14px 30px;
-  text-decoration: none;;
-  color: $white;
+  text-decoration: none;
+  color: $white !important;
   font-family: $poppins;
   font-size: 20px;
   font-weight: 600;
   margin-top: 20px;
   transition: color 500ms ease;
 
-
   &:hover,
   &:focus {
-    color: $dkbrown;
+    color: $dkbrown !important;
   }
 
   @media (min-width: $md) {

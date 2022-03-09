@@ -1,32 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 
 @font-face {
-  font-family: "Get Show";
+  font-family: 'Get Show';
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Get-Show.woff") format("woff");
+  src: url('../fonts/Get-Show.woff') format('woff');
 }
 
 // Globals
-@import "./vars";
-@import "./global";
-@import "./type";
-@import "./reset";
-@import "./utils";
-@import "./blocks/richtext/richtext";
+@import './vars';
+@import './global';
+@import './type';
+@import './reset';
+@import './utils';
+@import './blocks/richtext/richtext';
 
 // Components
-@import "./components/buttons";
-@import "./components/header/header";
-@import "./components/footer/footer";
-@import "./components/blog/blog-cards";
-@import "./components/store/product-card";
+@import './components/buttons';
+@import './components/header/header';
+@import './components/footer/footer';
+@import './components/blog/blog-cards';
+@import './components/store/product-card';
 
 // Blocks
-@import "./blocks/text-and-image/text-and-image";
-@import "./blocks/cta/ctas";
-@import "./blocks/infos/infos";
+@import './blocks/text-and-image/text-and-image';
+@import './blocks/cta/ctas';
+@import './blocks/infos/infos';
 
 // Pages
-@import "./pages/home";
-@import "./pages/single-product";
+@import './pages/home';
+@import './pages/single-product';
+@import './pages/cart';
+
+// Woocommerce
+@import './woocommerce/carrinho';

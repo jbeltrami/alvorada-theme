@@ -4,6 +4,7 @@
     color: inherit;
   }
   .product-card {
+    border-radius: 28px;
     .product-card__content {
       background-color: $beige;
       padding: rem-calc(15px) rem-calc(30px);

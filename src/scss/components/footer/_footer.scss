@@ -35,11 +35,11 @@
   }
 
   a {
-    color: $white;
+    color: $white !important;
     text-decoration: none;
     transition: color 350ms ease;
     &:hover {
-      color: $yellow;
+      color: $yellow !important;
     }
   }
 
