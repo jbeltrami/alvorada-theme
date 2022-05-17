@@ -1,0 +1,49 @@
+<div class="mobile-menu-container d-grid d-lg-none">
+  <a class="hdr-logo-link" href="{{ site.url }}" rel="home">
+    <img src="{{ theme.path }}/static/images/AlvoradaLogo.svg"
+      alt="Logo Alvorada Cogumelos" />
+  </a>
+
+  <div class="empty"></div>
+
+  <div class="hamburger">
+    <button class="mobile-menu-toggle">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  </div>
+</div>
+
+<div class="mobile-menu">
+  <nav id="nav-main" class="menu menu__main" role="navigation">
+    {% include 'menu-mobile.twig' with {
+      items: menu.get_items
+    } %}
+  </nav>
+  <nav class="menu menu__util">
+    <ul class="t">
+      <li>
+        <a href="{{ site.url }}/minha-conta">
+          <span class="me-1">{% include '/icons/icone-perfil.twig' %}</span>
+          Meu Perfil
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.url }}/carrinho">
+          <span class="me-1">{% include '/icons/icone-carrinho.twig' %}</span>
+          Meu Carrinho
+        </a>
+      </li>
+      <li>
+        <form action="{{ site.url }}"
+          role="search"
+          method="get"
+          class="d-flex justify-content-between">
+          <input type="search" name="s" placeholder="Pesquisa" />
+          <input type="submit" value="Buscar" />
+        </form>
+      </li>
+    </ul>
+  </nav>
+</div>

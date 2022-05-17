@@ -13,6 +13,7 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 input,
@@ -20,6 +21,14 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+p {
+  img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

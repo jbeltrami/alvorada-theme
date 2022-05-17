@@ -1,61 +1,74 @@
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#content {
+  @media (max-width: $lg) {
+    padding-top: 85px;
+  }
 }
 
 .wave-divider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: translateY(152px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: translateY(152px);
 
-    svg {
-        position: relative;
-        display: block;
-        width: calc(132% + 1.3px);
-        height: 152px;
-    }
+  svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 152px;
+  }
 }
 
 .info-top-wave {
-    left: 0;
-    line-height: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
+  left: 0;
+  line-height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  transform: translateY(-140px);
+  svg {
+    height: 140px;
     width: 100%;
-    overflow: hidden;
-    transform: translateY(-140px);
-    svg {
-        height: 140px;
-        width: 100%;
-    }
+  }
 }
 
 .info-bottom-wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: translateY(140px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: translateY(140px);
 
-    svg {
-        height: 140px;
-        width: 100%;
-    }
+  svg {
+    height: 140px;
+    width: 100%;
+  }
 }
 
 .block-spacer {
-    padding-top: rem-calc(30px);
-    padding-bottom: rem-calc(30px);
+  padding-top: rem-calc(30px);
+  padding-bottom: rem-calc(30px);
 
-    @media (min-width: $md) {
-        padding-top: rem-calc(60px);
-        padding-bottom: rem-calc(60px);
-    }
+  @media (min-width: $md) {
+    padding-top: rem-calc(60px);
+    padding-bottom: rem-calc(60px);
+  }
+}
+
+.search_cards {
+  .tease {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }

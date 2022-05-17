@@ -1,47 +1,59 @@
 .poppins_18 {
-    font-family: $poppins;
-    font-size: 14px;
+  font-family: $poppins;
+  font-size: 14px;
 }
 
 h2 {
-    font-family: $poppins;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 1.35;
-    letter-spacing: 0.6px;
+  font-family: $poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.6px;
+}
+
+h4,
+.h4 {
+  font-family: $poppins;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+
+  color: $offblack;
 }
 
 h1 {
-    font-family: $montserrat;
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 1.05;
+  font-family: $montserrat;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.05;
 
-    @media (min-width: $md) {
-        font-size: 64px;
-    }
+  @media (min-width: $md) {
+    font-size: 64px;
+  }
 }
 
 pre {
-    font-family: $getShow;
-    font-size: 45px;
-    line-height: 0.85;
-    overflow: hidden;
-    padding-left: rem-calc(5px);
+  font-family: $getShow;
+  font-size: 45px;
+  line-height: 0.85;
+  overflow: hidden;
+  padding-left: rem-calc(5px);
 
-    @media (min-width: $md) {
-        font-size: 90px;
-    }
+  @media (min-width: $md) {
+    font-size: 90px;
+  }
 }
 
 p {
-    font-family: $poppins;
-    font-size: 16px;
-    line-height: 1.45;
-    letter-spacing: 0.3px;
-    font-weight: 300;
+  font-family: $poppins;
+  font-size: 16px;
+  line-height: 1.45;
+  letter-spacing: 0.3px;
+  font-weight: 300;
 
-    @media (min-width: $md) {
-        font-size: 20px;
-    }
+  @media (min-width: $md) {
+    font-size: 20px;
+  }
 }

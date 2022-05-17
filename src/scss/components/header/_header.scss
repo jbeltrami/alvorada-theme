@@ -41,6 +41,29 @@
           color: $white;
         }
       }
+
+      form {
+        background-color: $lgtbrown;
+        padding: 10px;
+        border-radius: 30px;
+
+        input {
+          color: $white;
+        }
+
+        input[type='search'] {
+          border-radius: 30px;
+          background-color: transparent;
+          border: 1px solid transparent;
+          outline-offset: 0;
+          -webkit-appearance: none;
+        }
+
+        input[type='submit'] {
+          background-color: transparent;
+          border: 0;
+        }
+      }
     }
   }
 }

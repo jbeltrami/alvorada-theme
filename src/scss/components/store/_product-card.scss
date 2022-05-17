@@ -10,14 +10,8 @@
       padding: rem-calc(15px) rem-calc(30px);
 
       .product-card__title {
-        font-family: $poppins;
-        font-size: 20px;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.5;
+        @extend .h4;
         text-align: center;
-        color: $offblack;
       }
 
       .product-card__price {

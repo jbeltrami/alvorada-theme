@@ -1,6 +1,41 @@
 .woocommerce-cart {
   .wc-block-cart__submit-container {
     a {
+      @extend .alvorada_wc_button;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        display: block;
+        margin: auto 0;
+      }
     }
+  }
+
+  th,
+  h2,
+  .is-large.wc-block-cart .wc-block-cart__totals-title {
+    @extend .h4;
+    font-size: 26px;
+    text-transform: none;
+    color: $dkbrown;
+  }
+
+  a,
+  .wc-block-components-product-name {
+    color: $orange;
+    font-family: $poppins;
+  }
+  .wc-block-components-product-metadata__description p {
+    font-size: 16px;
+  }
+
+  .wc-block-components-product-price__value {
+    font-family: $poppins;
+  }
+
+  .wc-block-components-totals-wrapper span {
+    font-family: $poppins;
   }
 }

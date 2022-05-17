@@ -6,14 +6,15 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 
-$poppins: "Poppins", sans-serif;
-$montserrat: "montserrat", sans-serif;
-$getShow: "Get Show", sans-serif;
+$poppins: 'Poppins', sans-serif;
+$montserrat: 'montserrat', sans-serif;
+$getShow: 'Get Show', sans-serif;
 
 $yellow: #ffcb05;
 $red: #ee3435;
 $orange: #f87a01;
 $dkbrown: #3a2f29;
+$lgtbrown: #504740;
 $black: #2a1d16;
 $offblack: #27272f;
 $brown: #b8442e;
@@ -23,14 +24,14 @@ $black: #1a1b1e;
 $beige: #f5f6fb;
 
 $colors: (
-  "yellow": #ffcb05,
-  "red": #ee3435,
-  "dkbrown": #3a2f29,
-  "Marrom": #3a2f29,
-  "black": #2a1d16,
-  "brown": #b8442e,
-  "white": #fff,
-  "Branco": #fff,
+  'yellow': #ffcb05,
+  'red': #ee3435,
+  'dkbrown': #3a2f29,
+  'Marrom': #3a2f29,
+  'black': #2a1d16,
+  'brown': #b8442e,
+  'white': #fff,
+  'Branco': #fff,
 );
 
 @each $color, $value in $colors {

@@ -1,0 +1,23 @@
+{#
+/**
+* Block Name: Richtexts
+*
+* This is the template that displays the Richtexts block.
+*/
+#}
+
+{% if is_preview %}
+  <p>
+    Please click on the pencil to edit.
+  </p>
+{% endif %}
+
+<div id="{{ block.id }}" class="b-richtext block-spacer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        {{ fields.texto }}
+      </div>
+    </div>
+  </div>
+</div>

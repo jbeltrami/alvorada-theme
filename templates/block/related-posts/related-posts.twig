@@ -1,0 +1,50 @@
+{% if is_preview %}
+  Related Posts preview
+{% endif %}
+
+<div class="b-related-posts block-spacer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-lg-12">
+            <h4>
+              Veja nossos posts:
+            </h4>
+          </div>
+        </div>
+
+        <div class="row align-items-stretch">
+          {% for post in fields.posts %}
+            <div class="col-md-6">
+              <a class="blog-card card-effect"
+                href="{{ function('get_permalink', post.post.ID) }}">
+                <div class="blog__thumb">
+                  {{ function('get_the_post_thumbnail', post.post.ID, '') }}
+                </div>
+
+                <div class="blog__teaser">
+                  {% if post.post.post_title %}
+                    <h5>
+                      {{ post.post.post_title }}
+                    </h5>
+                  {% endif %}
+
+                  {% if post.title %}
+                    <h4>
+                      {{ post.title }}
+                    </h4>
+                  {% endif %}
+
+                  <p>
+                    {{ post.preview.length(12).read_more(false) }}
+                  </p>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

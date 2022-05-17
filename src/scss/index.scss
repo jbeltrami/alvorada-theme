@@ -18,6 +18,7 @@
 // Components
 @import './components/buttons';
 @import './components/header/header';
+@import './components/header/mobile-header';
 @import './components/footer/footer';
 @import './components/blog/blog-cards';
 @import './components/store/product-card';
@@ -33,4 +34,5 @@
 @import './pages/cart';
 
 // Woocommerce
+@import './woocommerce/global';
 @import './woocommerce/carrinho';

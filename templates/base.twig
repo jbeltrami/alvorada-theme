@@ -1,39 +1,42 @@
-{% block html_head_container %}
+<!DOCTYPE html>
+<!-- [if lt IE 9]><html class="no-js no-svg ie lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif] -->
+<!-- [if IE 9]><html class="no-js no-svg ie ie9 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif] -->
+<!-- [if gt IE 9]><! -->
+<html class="no-js no-svg" {{ site.language_attributes }}>
+  <!-- <![endif] -->
 
-	{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
-</head>{% endblock %}<body class="{{body_class}}" data-template="base.twig">
+  {% include 'html-header.twig' %}
+  <body class="{{ body_class }}" data-template="base.twig">
+    <header class="header">
+      {% block header %}
+        {% include 'partial/alvorada-header.twig' %}
+        {% include 'partial/alvorada-mobile-header.twig' %}
+      {% endblock %}
+    </header>
 
-<header class="header">
-	{% block header %}
-		{% include "partial/alvorada-header.twig" %}
-	{% endblock %}
+    <section id="content" role="main" class="content-wrapper">
+      {% if title %}
+        <h1>
+          {{ title }}
+        </h1>
+      {% endif %}
+      <div class="wrapper {{ sidebar_class }}">
+        {% block content %}
+          Sorry, no content
+        {% endblock %}
+      </div>
+      {% if sidebar %}
+        <aside class="layout-sidebar">
+          {{ sidebar }}
+        </aside>
+      {% endif %}
+    </section>
 
-</header>
-
-
-<section id="content" role="main" class="content-wrapper">
-	{% if title %}
-		<h1>
-			{{title}}
-		</h1>
-	{% endif %}
-	<div class="wrapper {{sidebar_class}}">
-		{% block content %}
-			Sorry, no content
-		{% endblock %}
-	</div>
-	{% if sidebar %}
-		<aside class="layout-sidebar">
-			{{sidebar}}
-		</aside>
-	{% endif %}
-</section>
-
-{% block footer %}
-	<footer id="footer">
-		{% include 'footer.twig' %}
-	</footer>
-	{{ function('wp_footer') }}
-{% endblock %}</body></html>
+    {% block footer %}
+      <footer id="footer">
+        {% include 'footer.twig' %}
+      </footer>
+      {{ function('wp_footer') }}
+    {% endblock %}
+  </body>
+</html>

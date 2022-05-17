@@ -1,0 +1,55 @@
+.woocommerce-page.theme-alvorada-theme {
+  .woocommerce-MyAccount-navigation,
+  .woocommerce-MyAccount-content {
+    width: 100%;
+    display: block;
+
+    * {
+      font-family: $poppins;
+    }
+
+    a {
+      color: $orange;
+      text-decoration: none;
+      transition: 350ms ease;
+
+      &:hover {
+        color: $dkbrown;
+      }
+    }
+
+    .woocommerce-Button {
+      @extend .alvorada_wc_button;
+    }
+  }
+
+  .woocommerce-MyAccount-content {
+    padding: 15px 30px;
+  }
+
+  .woocommerce-MyAccount-navigation {
+    ul {
+      margin: 0;
+      padding: 15px 30px;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        @media (max-width: $sm) {
+          width: 100%;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 650px);
+}

@@ -6,33 +6,38 @@
 .tease {
   margin-top: rem-calc(60px);
   margin-bottom: rem-calc(60px);
+}
+.blog-card {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
 
-  .blog-card {
-    text-decoration: none;
-    color: inherit;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .blog__thumb {
+    padding-bottom: 100%;
+    position: relative;
 
-    .blog__thumb {
-      padding-bottom: 100%;
-      position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: auto;
-        height: 100%;
-        object-fit: cover;
-      }
+  .blog__teaser {
+    padding: rem-calc(15px);
+
+    * {
+      color: $black;
     }
 
-    .blog__teaser {
-      padding: rem-calc(15px);
-
-      @media (min-width: $lg) {
-        padding: rem-calc(60px);
-      }
+    @media (min-width: $lg) {
+      padding: 60px 20px;
+      text-align: center;
     }
   }
 }

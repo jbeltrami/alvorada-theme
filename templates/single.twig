@@ -14,7 +14,7 @@
 				<div class="col-lg-10 offset-lg-1">
 					<section class="blog__content">
 						{% if post.sub_titulo %}
-							<h5>
+							<h5 class="mb-5">
 								{{post.sub_titulo}}
 							</h5>
 						{% endif %}
@@ -26,7 +26,7 @@
 						{% endif %}
 
 						{% if post.thumbnail %}
-							<img class="img-fluid w-100" src="{{ post.thumbnail.src }}" alt={{post.thumbnail.alt}}>
+							<img class="img-fluid w-100 my-4" src="{{ post.thumbnail.src }}" alt={{post.thumbnail.alt}}>
 						{% endif %}
 
 						<div>
