@@ -1,6 +1,7 @@
 .mobile-menu-container {
-  display: grid;
-  grid-template-columns: 2fr 10fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  // grid-template-columns: 2fr 10fr 1fr;
   padding: 10px;
   z-index: 1000;
   height: 125px;
@@ -12,6 +13,10 @@
   width: 100vw;
   background-color: $dkbrown;
   // }
+
+  img {
+    max-height: 105px;
+  }
 }
 
 .hamburger {
@@ -76,6 +81,12 @@
 
     &.menu__main {
       margin-bottom: rem-calc(60px);
+    }
+
+    &.menu__util {
+      input[type='search'] {
+        max-width: calc(100% - 60px);
+      }
     }
 
     ul {
