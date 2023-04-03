@@ -16,9 +16,11 @@ function zor_enqueue()
   // Register Scripts
   wp_register_script('zor_functions', $uri . '/static/js/index.min.js', [], '', true);
   wp_register_script('zor_jquery', $uri . '/static/js/vendor/jquery-3.6.0.min.js', ['jquery'], '', true);
+  wp_register_script('zor_bootstrap', $uri . '/static/js/vendor/bootstrap.bundle.min.js', ['jquery'], '', true);
 
   // Enqueue Scripts
   wp_enqueue_script('zor_functions');
   wp_enqueue_script('jquery');
   wp_enqueue_script('zor_jquery');
+  wp_enqueue_script('zor_bootstrap');
 }
