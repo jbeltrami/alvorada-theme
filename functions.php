@@ -1,15 +1,10 @@
 <?php
+// Load Composer dependencies.
+require_once __DIR__ . '/vendor/autoload.php';
 
-/**
- * Alvorada Cogumelos
- * Based on: https://github.com/timber/starter-theme
- *
- * @package  WordPress
- * @subpackage  Timber
- * @since   Timber 0.1
- */
+// Initialize Timber.
+Timber\Timber::init();
 
-// Create blocks category
 
 function custom_block_category($categories)
 {

@@ -1,20 +1,17 @@
 <div class="col-lg-5 mb-4">
-	{% if fields.texto %}
-		<div class="richtext">
-			{{ fields.texto }}
-		</div>
-	{% endif %}
+  {% if fields.texto %}
+    <div class="richtext">
+      {{ fields.texto }}
+    </div>
+  {% endif %}
 
-	{% if fields.cta %}
-		<a class="cta_button" href="{{fields.cta.url}}">
-			{{fields.cta.title}}
-		</a>
-	{% endif %}
+  {% if fields.cta %}
+    <a class="cta_button" href="{{ fields.cta.url }}">{{ fields.cta.title }}</a>
+  {% endif %}
 </div>
 
 <div class="col-lg-6 offset-lg-1 mb-4">
-	{% if fields.imagem %}
-
-		<img class="img-fluid" src="{{ Image(fields.imagem).src }}" alt="{{ Image(fields.imagem).alt }}">
-	{% endif %}
+  {% if fields.imagem %}
+    <img class="img-fluid" src="{{ get_image(fields.imagem).src }}" alt="{{ get_image(fields.imagem).alt }}" />
+  {% endif %}
 </div>
