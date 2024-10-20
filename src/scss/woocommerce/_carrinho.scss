@@ -39,3 +39,31 @@
     font-family: $poppins;
   }
 }
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+  background-color: $dkbrown;
+
+  * {
+    color: $white;
+  }
+}
+
+// #add_payment_method #payment div.payment_box,
+// .woocommerce-cart #payment div.payment_box,
+// .woocommerce-checkout #payment div.payment_box {
+//   background-color: $dkbrown;
+// }
+
+#add_payment_method #payment div.payment_box .form-row,
+.woocommerce-cart #payment div.payment_box .form-row,
+.woocommerce-checkout #payment div.payment_box .form-row {
+  margin-bottom: 0;
+}
+
+#add_payment_method #payment div.payment_box .wc-credit-card-form,
+.woocommerce-cart #payment div.payment_box .wc-credit-card-form,
+.woocommerce-checkout #payment div.payment_box .wc-credit-card-form input {
+  font-size: 16px;
+}
